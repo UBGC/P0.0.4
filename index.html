@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plate-o-Guessr to darmowa gra przegladarkowa, w ktorej zgadujesz kraj po tablicy rejestracyjnej. Sprawdz swoja wiedze geograficzna!">
+    <title>PLATE-O-GUESSR - test your geographic knowledge</title>
+    <link rel="stylesheet" href="menuTextures.css">
+    <link rel="icon" type="image/png" href="euroband_white.jpg">
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <h1 id="logo">PLATE-O-GUESSR</h1>
+    </div>
+    <div class="menu">
+        <a class="menu-item" href="game.html" id="play">Play</a>
+        <button class="menu-item" id="party_mode" >Party mode</button>
+        <a class="menu-item" href="about.html" id="about">About game</a>
+        <a class="menu-item" href="chooseLanguage.html" id="lang">Another languages</a>
+    </div>
+    <div id="partyStatus" class="party-status" hidden></div>
+    <input id="nick" placeholder="Twoj nick">
+    <button id="showLeaderboardBtn" class="menu-item">Pokaz najlepsze wyniki</button>
+    <div id="leaderboard" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:white; padding:20px; border:1px solid black; z-index:1000;">
+        <h2 id="best">Najlepsze wyniki</h2>
+        <ul id="scoresList"></ul>
+        <button id="closeLeaderboard">Zamknij</button>
+    </div>
+
+    <div id="partyModal" class="party-modal" hidden>
+        <div class="party-modal-content">
+            <button id="closePartyModal" type="button" class="party-close-btn">X</button>
+            <h2 id="partyModalTitle">Party mode</h2>
+
+            <p id="partyActiveInfo" class="party-active-info"></p>
+            <p id="partyFeedback" class="party-feedback"></p>
+            <div id="partyCodeBox" class="party-code-box" hidden>
+                <p id="partyCodeLabel" class="party-label">Party code</p>
+                <div class="party-code-row">
+                    <code id="partyCodeDisplay">-</code>
+                    <button id="copyPartyCodeBtn" class="menu-item" type="button">Copy code</button>
+                    <button id="sharePartyCodeBtn" class="menu-item" type="button">Share</button>
+                </div>
+                <input id="partyInviteLink" class="party-invite-link" readonly>
+            </div>
+
+            <div class="party-sections">
+                <section class="party-section">
+                    <h3 id="partyCreateTitle">Create party</h3>
+                    <label id="partyDurationLabel" for="partyDuration">Duration</label>
+                    <input id="partyDuration" type="number" min="10" max="129600" step="10" value="60">
+                    <small id="partyDurationHint">Minutes (10 - 129600)</small>
+
+                    <p id="partyCountriesLabel" class="party-label">Available countries</p>
+                    <div id="partyCountriesContainer" class="party-countries"></div>
+                    <button id="createPartyBtn" class="menu-item" type="button">Create party</button>
+                </section>
+
+                <section class="party-section">
+                    <h3 id="partyJoinTitle">Join party</h3>
+                    <label id="partyCodeInputLabel" for="partyCodeInput">Party code</label>
+                    <input id="partyCodeInput" maxlength="12" placeholder="e.g. A1B2C3">
+                    <button id="joinPartyBtn" class="menu-item" type="button">Join party</button>
+                    <button id="leavePartyBtn" class="menu-item danger-btn" type="button">Leave current party</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="menu.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="leaderboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Typography */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Colors */
+  
+  :root {
+    --primary-color: #626262;
+    --secondary-color: #f1c40f;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Layout */
+  
+  .container {
+    max-width: 800px;
+    margin: 16px auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Buttons and Interactions */
+  
+  #button {
+    border-color: #101010;
+    text-align: center;
+    text-decoration: none;
+    color: #626262;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ddd;}
+
+  
+  #button:hover {
+    transition: all 0.5s ease;
+    background-color: #aaa;
+    color: #fff;
+    padding: 11px 22px;
+  }
+  
+  #button:active {
+    transform: translateY(2px);
+  }
+  

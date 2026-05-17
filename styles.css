@@ -1,0 +1,99 @@
+html, body { height: 100%; margin: 0; font-family: sans-serif; }
+    #map { width: 100%; height: 100%; }
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  font-size: 14px;
+  max-width: 840px;
+}
+
+.hud-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#partyInfo {
+  display: inline-block;
+  margin-top: 4px;
+  color: #0f4c81;
+  font-weight: 600;
+}
+
+.hud-buttons {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+    #plate {
+      font-size: 26px; font-weight: bold;
+      background: #fff; border: 2px solid #ccc;
+      padding: 4px 10px; margin-bottom: 6px;
+      display: inline-block; border-radius: 4px;
+    }
+    button {
+      margin-top: 6px; padding: 6px 12px;
+      border: none; border-radius: 4px;
+      cursor: pointer; background: #2563eb; color: #fff;
+    }
+    button:disabled { background: #888; cursor: not-allowed; }
+  .plate {
+  display: flex;
+  align-items: center;
+  border: 3px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  height: 70px;
+  padding: 0 10px;
+  font-family: 'Roboto Condensed', 'Arial Black', sans-serif;
+}
+
+.euroband {
+  width: 42px;
+  height: 100%;
+  background: #003399; /* niebieski */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: relative;
+}
+
+.eu-stars {
+  width: 26px;
+  height: 26px;
+  background: url("eu_banner.png") no-repeat center/contain;
+  margin-bottom: 4px;
+}
+
+
+.country {
+  font-size: 16px;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.plate-text {
+  font-size: 38px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  color: #000;
+}

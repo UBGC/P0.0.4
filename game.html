@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Plate-o-Guessr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plate-o-Guessr to darmowa gra przegladarkowa, w ktorej zgadujesz kraj po tablicy rejestracyjnej. Sprawdz swoja wiedze geograficzna!">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="euroband_white.jpg">
+</head>
+<body>
+<div id="map"></div>
+<div id="hud">
+  <div class="hud-top">
+    <div class="plate">
+      <div class="euroband">
+        <div class="eu-stars"></div>
+        <div class="country" id="countryCode">PL</div>
+      </div>
+      <div class="plate-text" id="plateText">PO 12345</div>
+    </div>
+
+    <div class="stats">
+      <span id="round">1</span>/<span id="maxRounds">5</span><br>
+      <span id="score">0</span><br>
+      <span id="distance">-</span><br>
+      <span id="roundPoints">-</span><br>
+      <span id="partyInfo" style="display:none;"></span>
+    </div>
+  </div>
+
+  <div class="hud-buttons">
+    <button id="guessBtn" disabled>Zatwierdz strzal</button>
+    <button id="nextBtn" style="display:none;">Nastepna runda</button>
+  </div>
+</div>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="">
+</script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="leaderboard.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
